@@ -97,7 +97,7 @@ while(1):
     maskCenter = [int(size[0]/2), int(size[1]/2)]
 
     #Applying circular mask to frame
-    mask = create_circular_mask(size[0], size[1], maskCenter = maskCenter, maskRadius = maskRadius)
+    mask = create_circular_mask(size[0], size[1], maskCenter, maskRadius)
     mask_area = np.pi*maskRadius**2
     maskedImage = bsImage.copy()
     maskedImage[~mask] = 0
@@ -150,7 +150,7 @@ while(1):
                 cv2.rectangle(frame,(nominatedBlockageX,nominatedBlockageY),(nominatedBlockageX+new_blockage_w,nominatedBlockageY+new_blockage_h),(255,0,255),2)
                 cv2.imwrite(str(videodirname+"\\"+"Frame_"+str(blockageCounter-1)+"_"+str(videoTime).replace(":","")+".jpg"),frame)
                 continue
-            
+
             if  recordTime != seconds and applyDetection:
                 worksheet.write('A'+str(blockageCounter), str(blockageCounter-1)) 
                 worksheet.write('B'+str(blockageCounter), str(cap.get(cv2.CAP_PROP_POS_FRAMES))) 
