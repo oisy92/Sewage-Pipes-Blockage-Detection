@@ -1,7 +1,9 @@
 ![alt text1](https://github.com/oisy92/Sewage-Pipes-Blockage-Detection/blob/master/Image/Sample2.jpg?raw=true)
 
-# Sewage Pipes Blockage Detection
-Camera based software to autonomosusly detect blockages and defects in sewer pipes. This is a machine learning problem, but I thought it would be interesting to see if it can be solved using OpenCV and simple math. The software manages to detect 90% of blockages in sewage path.
+# Sewage Pipes Blockages Detection
+Camera based software to autonomosusly detect blockages and defects in sewer pipes. This is a machine learning problem, but I thought it would be interesting to see if it can be solved using OpenCV and simple math. The software manages to detect 90% of blockages in sewage path. 
+
+In addition to detection, the software produces a spreadsheet after each run to record the detected blockages and their related information such as size, width, height, and time of detection.
 
 The software uses variety of OpenCV functions. To name a few, Canny Filter, Background Subtraction, and other manually implemented functions to deliver best performance.
 
